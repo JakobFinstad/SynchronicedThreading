@@ -1,7 +1,7 @@
 package no.ntnu.IDATA2305.Group14.booking;
 
 /**
- * A class that represents a server where
+ * A class that represents a movie theaters information
  */
 public class MovieTicketServer {
     private String movieName;

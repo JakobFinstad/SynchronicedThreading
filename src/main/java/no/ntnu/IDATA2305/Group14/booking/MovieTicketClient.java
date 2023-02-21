@@ -27,6 +27,7 @@ public class MovieTicketClient extends Thread {
      * Books tickets from the server, with the required information.
      */
     public void run(){
+        System.out.println("Ordering tickets...");
         ticketServer.bookTicket(customer,numberOfTickets);
     }
 

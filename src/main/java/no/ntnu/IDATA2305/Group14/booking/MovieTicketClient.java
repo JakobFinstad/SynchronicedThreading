@@ -28,9 +28,9 @@ public class MovieTicketClient extends Thread {
      */
     public synchronized void run(){
         synchronized (ticketServer){
+            System.out.println("Ordering tickets...");
             ticketServer.bookTicket(customer, numberOfTickets);
         }
-        System.out.println("Ordering tickets...");
     }
 
     /**

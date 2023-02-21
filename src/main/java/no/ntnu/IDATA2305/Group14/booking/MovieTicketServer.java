@@ -11,15 +11,15 @@ public class MovieTicketServer {
 
 
     public void bookTicket(String customerName, int numberOfSeats) {
-        System.out.println("Hi," + customerName + " : " + availableSeats + " : Seats available for " + movieName);
+        System.out.println("Hi, " + customerName + ". " + availableSeats + " Seats available for " + movieName);
 
         // TBD
         if ((availableSeats - numberOfSeats) < 0) {
-            System.out.println("There are currently only " + availableSeats
+            System.out.println("Hi, " + customerName + ". " + "There are currently " + availableSeats + " seat(s) available"
                     + ", which means you cannot book " + numberOfSeats + " seats.");
         } else {
             this.availableSeats = availableSeats - numberOfSeats;
-            System.out.println("Hi," + customerName + " : " + numberOfSeats + " Seats booked successfully for" + movieName);
+            System.out.println("Hi," + customerName + " : " + numberOfSeats + " Seats booked successfully for " + movieName);
         }
     }
 }

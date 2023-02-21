@@ -26,9 +26,18 @@ public class MovieTicketClient extends Thread {
     /**
      * Books tickets from the server, with the required information.
      */
-    public void run(){
+    public synchronized void run(){
+        if (!customer.equals("Xiangming")){
+             try {
+               wait();
+             } catch (InterruptedException e) {
+
+             }
+        }
+
         System.out.println("Ordering tickets...");
         ticketServer.bookTicket(customer,numberOfTickets);
+        notify();
     }
 
     /**

@@ -13,10 +13,10 @@ public class MovieTicketClient extends Thread {
      * Constructor for the class.
      *
      * @param customer name of the reservation
-     * @param NumberOfTickets that shall be ordered
+     * @param numberOfTickets that shall be ordered
      * @param movieTicketServer the server that we shall order from
      */
-    public MovieTicketClient(String customer, int NumberOfTickets, MovieTicketServer movieTicketServer) {
+    public MovieTicketClient(String customer, int numberOfTickets, MovieTicketServer movieTicketServer) {
         setCustomer(customer);
         setNumberOfTickets(numberOfTickets);
         this.ticketServer = movieTicketServer;
